@@ -1,0 +1,45 @@
+.irs--flat .irs-handle > i:first-child {
+	background-color: #66855f;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	left: 0;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+.irs--flat .irs-line {
+	height: 10px;
+	background-color: #eeeeee;
+}
+.irs--flat .irs-bar {
+	background: linear-gradient(90deg, #ff7f57 0%, #ff9d7f 100%);
+}
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+	background: none;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 30px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #66855f;
+	top: -4px;
+}
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+	opacity: 0;
+}
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+	background: none;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0em;
+	text-align: left;
+	color:#666666;
+}

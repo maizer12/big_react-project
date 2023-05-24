@@ -13,7 +13,6 @@
 	font-weight: 500;
 	line-height: 1.2;
 	letter-spacing: 0em;
-	text-align: center;
 }
 .title {
 	font-family: Inter;
@@ -22,4 +21,11 @@
 	line-height: 1.2;
 	letter-spacing: -0.7200000286102295px;
 	text-align: center;
+	max-width: 845px;
+	margin: 0 auto;
+}
+.min-container{
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
 }
