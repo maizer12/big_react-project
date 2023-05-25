@@ -17,7 +17,8 @@ $(document).ready(function(){
 });
 //accordions
 $( function() {
-	$( "#accordion" ).accordion({
-		active:1000
+	$( ".often-questions__acordions" ).accordion({
+		active:1000,
+		collapsible:true
 	});
 } );

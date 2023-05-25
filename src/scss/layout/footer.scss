@@ -1,13 +1,99 @@
 .footer {
-  padding: rem(20) 0;
-  background: $blackColor;
-  // .footer__container
-  &__container {
-    display: flex;
-    align-items: center;
-    @include media(510) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+	padding: rem(20) 0;
+	background: #f0f0f0;
+	border-top: 1px solid rgba(black, 0.2);
+	&__logo {
+		width: 175px;
+		display: block;
+		object-fit: contain;
+		margin: 0 auto;
+	}
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__column {
+		max-width: 275px;
+		width: 100%;
+		padding: 44px 10px;
+	}
+	&__text {
+		font-family: Montserrat;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.4;
+		color: #000000;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-top: 26px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	&__desc {
+		font-family: Montserrat;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #666666;
+		margin-top: 26px;
+	}
+	&__footer {
+		margin: 0 auto;
+		display: block;
+		width: fit-content;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: left;
+    color:$hoverColor;
+		@include hoverText(black);
+	}
+}
+.footer-list {
+	max-width: 275px;
+	width: 100%;
+	padding: 44px 10px;
+	&__name {
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: rgba(#000000, 0.8);
+		margin-bottom: 56px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	&__item {
+		display: flex;
+		column-gap: 16px;
+	}
+	&__link {
+		font-family: Montserrat;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.2;
+		color: #666666;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-bottom: 28px;
+		display: block;
+		@include hoverText($hoverColor);
+		svg {
+			path {
+				transition: 0.6s;
+			}
+		}
+		&:hover {
+			svg {
+				path {
+					stroke: $hoverColor;
+				}
+			}
+		}
+	}
 }
