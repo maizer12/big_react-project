@@ -8,12 +8,40 @@ $(".js-range-slider").ionRangeSlider({
 	grid: false
 });
 //SLICK
-$(document).ready(function(){
-  $('.car-park-slide').slick({
-    slidesToShow: 3,
+$(document).ready(function() {
+	var slider = $(".car-park-slide");
+	var slidesToShow = calculateSlidesToShow();
+
+	slider.slick({
+		slidesToShow: slidesToShow,
 		prevArrow: '.slick-prev',
-    nextArrow: '.slick-next'
-  });
+		nextArrow: '.slick-next'
+		// Додайте інші налаштування Slick Slider, які вам потрібні
+	});
+
+	function calculateSlidesToShow() {
+		// Визначте ширину екрану або контейнера, в якому відображається слайдер
+		var containerWidth = slider.width();
+
+		// Перевірте, чи ширина менше 600
+		if (containerWidth < 600) {
+			return 1; // Показувати лише 1 слайд
+		}
+
+		// Визначте ширину одного слайда
+		var slideWidth = slider.find("div").first().outerWidth();
+
+		// Обчисліть кількість слайдів, які можуть вміститися на екрані
+		var slidesToShow = Math.floor(containerWidth / slideWidth);
+
+		return slidesToShow;
+	}
+
+	// Оновити кількість слайдів, коли розмір вікна браузера змінюється
+	$(window).resize(function() {
+		var slidesToShow = calculateSlidesToShow();
+		slider.slick("slickSetOption", "slidesToShow", slidesToShow);
+	});
 });
 //accordions
 $( function() {

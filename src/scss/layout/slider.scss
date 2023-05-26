@@ -3,7 +3,8 @@
 	&__item {
 		max-width: 390px;
 		transition: 0.6s;
-		padding: 20px 5px 77px;
+		padding: 20px 5px 20px;
+		height: auto;
 		margin-right: 50px;
 		&:hover {
 			background-color: #f7f7f7;
@@ -56,6 +57,23 @@
 			content: '-';
 		}
 	}
+	&__test {
+		margin: 0 auto;
+		margin-top: 30px;
+		border: 2px solid $hoverColor;
+		color:$hoverColor;
+		display: none;
+		padding: 12px 22px;
+		border-radius:10px;
+		background:none;
+		width: fit-content;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 14px;
+		letter-spacing: 0em;
+		text-align: center;
+	}
 }
 //buttons
 .car-park__slider {
@@ -71,23 +89,24 @@
 	justify-content: space-between;
 	left: -7%;
 }
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
 	width: 60px;
 	height: 60px;
-	border-radius:50%;
-	background:none;
-	border:#66855F solid 2px;
+	border-radius: 50%;
+	background: none;
+	border: #66855f solid 2px;
 	transition: 0.6s;
-	svg{
-		path{
+	svg {
+		path {
 			transition: 0.6s;
 		}
 	}
-	&:hover{
-		border-color:$hoverColor;
-		svg{
-			path{
-				fill:$hoverColor;
+	&:hover {
+		border-color: $hoverColor;
+		svg {
+			path {
+				fill: $hoverColor;
 			}
 		}
 	}
