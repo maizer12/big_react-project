@@ -352,19 +352,25 @@
 		align-items: center;
 		column-gap: 23px;
 		max-width: 320px;
+		width: 100%;
 	}
 }
 .started-quickly {
 	padding-top: 102px;
 	padding-bottom: 74px;
 	&__wraper {
+		max-width: 1650px;
+		margin: 0 auto;
 		width: 100%;
 		position: relative;
-		background-image: url('../../images/bg-started.jpg');
 		background-position: right;
-		min-height: 635px;
+		display: flex;
 		background-size: content;
 		background-repeat: no-repeat;
+	}
+	&__bg {
+		background-color: #e3eff7;
+		border-radius: 52px;
 	}
 	&__inner {
 		padding-top: 18px;
@@ -390,7 +396,7 @@
 		font-family: Montserrat;
 		font-size: 18px;
 		font-weight: 500;
-		line-height: 24px;
+		line-height: 1.4;
 		letter-spacing: 0em;
 		text-align: left;
 		color: #000000;
@@ -575,17 +581,36 @@
 	.connect-to__img {
 		width: 100%;
 	}
-	.car-park__buttons{
+	.car-park__buttons {
 		width: 100%;
 		left: 0;
 		top: 40%;
+	}
+	.started-quickly__bg {
+		margin-right: -17%;
 	}
 }
 @media (max-width: 1250px) {
 	.why-us__items {
 		justify-content: space-around;
 	}
-
+	.started-quickly__bg {
+		display: none;
+	}
+	.started-quickly__inner {
+		max-width: 100%;
+	}
+	.started-quickly__list {
+		margin-left: 0;
+	}
+	.started-quickly {
+		padding-top: 82px;
+		padding-bottom: 52px;
+	}
+	.started-quickly__btn {
+		margin: 0 auto;
+		display: block;
+	}
 }
 @media (max-width: 1200px) {
 	.home-banner__title {
@@ -623,6 +648,11 @@
 	}
 	.earnings-column {
 		padding: 40px;
+	}
+	.requirements__list {
+		flex-wrap: wrap;
+		row-gap: 20px;
+		justify-content: space-around;
 	}
 }
 .earnings-to-day__btn-adapt,
@@ -757,10 +787,12 @@
 	.car-park__sub-title {
 		font-size: 16px;
 	}
-	.car-park__slider{
+	.car-park__slider {
 		margin-top: 50px;
 	}
-
+	.started-quickly__title {
+		font-size: 32px;
+	}
 }
 @media (max-width: 768px) {
 	.cards-advantages__items {
@@ -858,24 +890,67 @@
 		font-size: 14px;
 		margin-bottom: 40px;
 	}
-	.car-park-slide__item{
+	.car-park-slide__item {
 		margin: 0;
 	}
-	.car-park__slider{
+	.car-park__slider {
 		margin-top: 30px;
 	}
-	.car-park__sub-title{
+	.car-park__sub-title {
 		font-size: 14px;
 	}
-	.slick-prev, .slick-next{
+	.slick-prev,
+	.slick-next {
 		width: 40px;
 		height: 40px;
-		svg{
+		svg {
 			width: 14px;
 		}
 	}
-	.car-park{
+	.car-park {
 		padding-bottom: 40px;
+	}
+	.requirements__title {
+		margin-bottom: 40px;
+	}
+	.started-quickly__inner {
+		padding-top: 0;
+		background-image:url('../../images/tell-bg.png');
+		background-repeat:no-repeat;
+		background-position-x:right;
+		background-position-y:center;
+		width: 100%;
+	}
+	.started-quickly__item span{
+		min-height: 25px;
+		max-height: 25px;
+		min-width: 25px;
+	}
+	.started-quickly__list{
+		max-width: 300px;
+		
+	}
+	.started-quickly__container{
+		width: 100%;
+		padding-right: 0;
+	}
+	.started-quickly {
+		padding-top: 55px;
+	}
+	.started-quickly__title {
+		font-size: 26px;
+		text-align: center;
+		margin-bottom: 32px;
+	}
+	.started-quickly__item{
+		column-gap:22px;
+		font-size: 14px;
+	}
+	.started-quickly__text{
+		font-size: 16px;
+	}
+	.started-quickly__btn{
+
 	}
 }
 @media (max-width: 620px) {
@@ -884,10 +959,10 @@
 	}
 }
 @media (max-width: 520px) {
-	.car-park{
+	.car-park {
 		padding-bottom: 30px;
 	}
-	.car-park-slide__test{
+	.car-park-slide__test {
 		display: block;
 	}
 	.home-banner__sub-title {
@@ -996,46 +1071,88 @@
 	.earnings-to-day {
 		min-height: 500px;
 	}
-	.earnings-column__sum{
+	.earnings-column__sum {
 		font-size: 28px;
 	}
-	.earnings-column__desc{
+	.earnings-column__desc {
 		font-size: 14px;
 	}
-	.earnings-column__rangers{
+	.earnings-column__rangers {
 		margin-bottom: 35px;
 	}
-	.earnings-column .earnings-btn-active{
+	.earnings-column .earnings-btn-active {
 		font-size: 14px;
 	}
 	.earnings-column__inner {
 		width: 370px;
 	}
-	.earnings-column__buttons{
+	.earnings-column__buttons {
 		margin-bottom: 30px;
 	}
-	.earnings-column__text{
+	.earnings-column__text {
 		margin-bottom: 15px;
 		font-size: 12px;
 	}
-	.earnings-column__btn{
+	.earnings-column__btn {
 		padding: 15px;
 	}
-	.slick-prev, .slick-next{
+	.slick-prev,
+	.slick-next {
 		width: 29px;
 		height: 29px;
-		svg{
+		svg {
 			width: 9px;
+			height: auto;
 		}
 	}
-	.car-park__sub-title{
+	.car-park__sub-title {
 		font-size: 10px;
 	}
-	.car-park__title{
+	.car-park__title {
 		margin-bottom: 8px;
 	}
-	.car-park-slide__name{
+	.car-park-slide__name {
 		font-size: 24px;
+	}
+	.requirements__list {
+		padding-top: 20px;
+		background-image: url('../../images/bg-requirements.jpg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position-y: bottom;
+		background-position-x: right;
+		padding-bottom: 15px;
+	}
+	.requirements__container {
+		padding: 0;
+	}
+	.requirements__title {
+		margin-bottom: 15px;
+	}
+	.requirements__item {
+		padding: 7px 11px;
+		border-radius: 10px;
+		border-bottom: #91ad37 1px solid;
+		background-color: rgba(#fff, 0.7);
+	}
+	.car-park {
+		padding-bottom: 0;
+	}
+}
+@media (max-width: 450px) {
+	.started-quickly__item{
+		max-width: 225px;
+		column-gap:13px;
+		font-size: 12px;
+	}
+	.started-quickly__text{
+		margin-bottom: 21px;
+	}
+	.started-quickly__btn{
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		margin-right: 15px;
 	}
 }
 
@@ -1043,6 +1160,7 @@
 	.earnings-to-day {
 		min-height: 400px;
 	}
+
 }
 @media (max-width: 370px) {
 	.home-banner__title {
@@ -1059,39 +1177,42 @@
 	.why-us__items {
 		column-gap: 5px;
 	}
-	.earnings-column__inner{
+	.earnings-column__inner {
 		max-width: 320px;
 	}
-	.earnings-column__rangers{
+	.earnings-column__rangers {
 		row-gap: 25px;
 	}
-	.earnings-column__sum{
+	.earnings-column__sum {
 		font-size: 21px;
 		margin-bottom: 5px;
 	}
-	.earnings-column__desc{
+	.earnings-column__desc {
 		font-size: 12px;
 	}
-	.irs--flat .irs-line, .irs--flat .irs-bar{
+	.irs--flat .irs-line,
+	.irs--flat .irs-bar {
 		height: 7px;
 	}
-	.irs--flat .irs-handle > i:first-child{
+	.irs--flat .irs-handle > i:first-child {
 		width: 13px;
 		height: 13px;
 	}
-	.irs--flat .irs-min, .irs--flat .irs-max{
+	.irs--flat .irs-min,
+	.irs--flat .irs-max {
 		font-size: 12px;
 	}
-	.earnings-column__text{
+	.earnings-column__text {
 		margin-bottom: 10px;
 	}
 	.earnings-column__btn {
 		padding: 12px;
 		font-size: 14px;
 	}
-	.earnings-column__buttons{
+	.earnings-column__buttons {
 		margin-bottom: 20px;
 	}
+	
 }
 @media (max-width: 350px) {
 	.why-us__items {
