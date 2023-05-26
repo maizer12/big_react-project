@@ -9,40 +9,33 @@ $('.js-range-slider').ionRangeSlider({
 })
 //SLICK
 $(document).ready(function () {
-	var slider = $('.car-park-slide')
-	var slidesToShow = calculateSlidesToShow()
-
-	slider.slick({
-		slidesToShow: slidesToShow,
+	$('.car-park-slide').slick({
 		prevArrow: '.slick-prev',
 		nextArrow: '.slick-next',
-		// Додайте інші налаштування Slick Slider, які вам потрібні
-	})
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 601,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
 
-	function calculateSlidesToShow() {
-		// Визначте ширину екрану або контейнера, в якому відображається слайдер
-		var containerWidth = slider.width()
 
-		// Перевірте, чи ширина менше 600
-		if (containerWidth < 600) {
-			return 1 // Показувати лише 1 слайд
-		}
 
-		// Визначте ширину одного слайда
-		var slideWidth = slider.find('div').first().outerWidth()
+ 
+  
 
-		// Обчисліть кількість слайдів, які можуть вміститися на екрані
-		var slidesToShow = Math.floor(containerWidth / slideWidth)
+});
 
-		return slidesToShow
-	}
-
-	// Оновити кількість слайдів, коли розмір вікна браузера змінюється
-	$(window).resize(function () {
-		var slidesToShow = calculateSlidesToShow()
-		slider.slick('slickSetOption', 'slidesToShow', slidesToShow)
-	})
-})
 //accordions
 // $(function() {
 //   $(".often-questions__acordions").accordion({
@@ -124,4 +117,29 @@ innerPopup?.addEventListener('click', e => {
 
 closePopup?.addEventListener('click', () => {
 	body?.classList.toggle('popup-open')
+})
+//footer
+
+$(function () {
+	var mq = window.matchMedia('(min-width: 769px)')
+	var accordion = $('.footer-accordions').accordion({
+		active: null,
+		collapsible: true,
+		heightStyle: 'content',
+	})
+
+	function checkBreakpoint(mq) {
+		if (mq.matches) {
+			accordion.accordion('destroy')
+		} else {
+			accordion = $('.footer-accordions').accordion({
+				active: null,
+				collapsible: true,
+				heightStyle: 'content',
+			})
+		}
+	}
+
+	mq.addListener(checkBreakpoint)
+	checkBreakpoint(mq)
 })
