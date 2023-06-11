@@ -46,38 +46,9 @@ $(document).ready(function () {
 //   });
 // });
 $(function () {
-	function toggleAccordionClass() {
-		var windowWidth = $(window).width()
-		var isMobileScreen = windowWidth < 500
-
-		if (isMobileScreen) {
-			$('.often-questions__acordions').accordion({
-				active: 1000,
-				collapsible: true,
-				activate: function (event, ui) {
-					if (ui.newPanel.length > 0) {
-						ui.newPanel.parent().addClass('active-accord-parent')
-						$('body').addClass('active-accord-class')
-					} else {
-						const active = document.querySelector('.active-accord-parent')
-						active.classList.remove('active-accord-parent')
-						$('body').removeClass('active-accord-class')
-					}
-				},
-			})
-		} else {
-			$('.often-questions__acordions').accordion({
-				active: false,
-				collapsible: true,
-			})
-			$('body').removeClass('active-accord-class')
-		}
-	}
-
-	toggleAccordionClass()
-
-	$(window).on('resize', function () {
-		toggleAccordionClass()
+	$('.often-questions__acordions').accordion({
+		active: 1000,
+		collapsible: true,
 	})
 })
 
