@@ -21,11 +21,11 @@
 	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 700;
-	line-height: 30px;
+	line-height: 2.14;
 	letter-spacing: 0em;
 	text-align: left;
 	color: #66855f;
-	top: -4px;
+	top: 0px;
 }
 .irs--flat .irs-from:before,
 .irs--flat .irs-to:before,
@@ -38,8 +38,35 @@
 	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 500;
-	line-height: 1;
+	line-height: 2.14;
 	letter-spacing: 0em;
 	text-align: left;
-	color:#666666;
+	top: -6px;
+	color: #666666;
+}
+.irs--flat {
+	height: 45px;
+}
+.rangers-home-column {
+	.irs--flat .irs-from,
+	.irs--flat .irs-to,
+	.irs--flat .irs-single {
+		top: 48px;
+	}
+	.irs--flat .irs-min,
+	.irs--flat .irs-max {
+		top: 38px;
+	}
+	.earnings-column__text {
+		margin-bottom: -5px;
+	}
+	.earnings-column__rangers {
+		row-gap: 60px;
+	}
+	.earnings-column__rangers {
+		margin-bottom: 44px;
+	}
+	.earnings-column__rangers {
+		padding-bottom: 26px;
+	}
 }

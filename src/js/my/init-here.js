@@ -12,29 +12,23 @@ $(document).ready(function () {
 	$('.car-park-slide').slick({
 		prevArrow: '.slick-prev',
 		nextArrow: '.slick-next',
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 601,
-        settings: {
-          slidesToShow: 1
-        }
-      },
-    ]
-  });
-
-
-
- 
-  
-
-});
+		slidesToShow: 3,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 601,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
+	})
+})
 
 //accordions
 // $(function() {
@@ -51,41 +45,41 @@ $(document).ready(function () {
 //     }
 //   });
 // });
-$(function() {
-  function toggleAccordionClass() {
-    var windowWidth = $(window).width();
-    var isMobileScreen = windowWidth < 500;
+$(function () {
+	function toggleAccordionClass() {
+		var windowWidth = $(window).width()
+		var isMobileScreen = windowWidth < 500
 
-    if (isMobileScreen) {
-      $(".often-questions__acordions").accordion({
-        active: 1000,
-        collapsible: true,
-        activate: function(event, ui) {
-          if (ui.newPanel.length > 0) {
-            ui.newPanel.parent().addClass("active-accord-parent"); 
-            $("body").addClass("active-accord-class");
-          } else {
+		if (isMobileScreen) {
+			$('.often-questions__acordions').accordion({
+				active: 1000,
+				collapsible: true,
+				activate: function (event, ui) {
+					if (ui.newPanel.length > 0) {
+						ui.newPanel.parent().addClass('active-accord-parent')
+						$('body').addClass('active-accord-class')
+					} else {
 						const active = document.querySelector('.active-accord-parent')
-						active.classList.remove("active-accord-parent"); 
-            $("body").removeClass("active-accord-class");
-          }
-        }
-      });
-    } else {
-      $(".often-questions__acordions").accordion({
-        active: false,
-        collapsible: true
-      });
-      $("body").removeClass("active-accord-class"); 
-    }
-  }
+						active.classList.remove('active-accord-parent')
+						$('body').removeClass('active-accord-class')
+					}
+				},
+			})
+		} else {
+			$('.often-questions__acordions').accordion({
+				active: false,
+				collapsible: true,
+			})
+			$('body').removeClass('active-accord-class')
+		}
+	}
 
-  toggleAccordionClass();
-  
-  $(window).on("resize", function() {
-    toggleAccordionClass(); 
-  });
-});
+	toggleAccordionClass()
+
+	$(window).on('resize', function () {
+		toggleAccordionClass()
+	})
+})
 
 //burger - popup
 const btnBurg = document.querySelector('.header__burger')
@@ -142,4 +136,23 @@ $(function () {
 
 	mq.addListener(checkBreakpoint)
 	checkBreakpoint(mq)
+})
+
+//switch-start
+const allButtonsSwitch = document.querySelector('.earnings-column-switch')
+
+allButtonsSwitch?.addEventListener('click', e => {
+	const elem = e.target
+	const parent = elem.parentNode
+	const active = parent.parentNode.querySelector('.earnings-btn-active-switch')
+	if (elem.classList.contains('earnings-column-switch__text') && active) {
+		active.classList.remove('earnings-btn-active-switch')
+		parent.classList.add('earnings-btn-active-switch')
+	}
+})
+//video popup
+$(document).ready(function () {
+	$('.video-popup').magnificPopup({
+		type: 'iframe',
+	})
 })

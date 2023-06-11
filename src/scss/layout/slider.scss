@@ -3,7 +3,7 @@
 	&__item {
 		max-width: 100%;
 		transition: 0.6s;
-		padding: 20px 5px 20px;
+		padding: 20px 5px 77px;
 		height: auto;
 		margin-right: 50px;
 		&:hover {
@@ -32,7 +32,7 @@
 		line-height: 1.2;
 		letter-spacing: 0em;
 		text-align: left;
-		margin-bottom: 19px;
+		margin-bottom: 19.9px;
 	}
 	&__year {
 		font-family: Montserrat;
@@ -49,7 +49,7 @@
 		font-family: Montserrat;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 1.4;
+		line-height: 1.5;
 		color: #0b132a;
 		letter-spacing: 0em;
 		text-align: left;
@@ -61,11 +61,11 @@
 		margin: 0 auto;
 		margin-top: 30px;
 		border: 2px solid $hoverColor;
-		color:$hoverColor;
+		color: $hoverColor;
 		display: none;
 		padding: 12px 22px;
-		border-radius:10px;
-		background:none;
+		border-radius: 10px;
+		background: none;
 		width: fit-content;
 		font-family: Montserrat;
 		font-size: 14px;
@@ -83,7 +83,8 @@
 }
 .car-park__buttons {
 	position: absolute;
-	top: 50%;
+	bottom: 127px;
+	pointer-events: none;
 	transform: translateY(-50%);
 	width: 110%;
 	display: flex;
@@ -92,6 +93,7 @@
 }
 .slick-prev,
 .slick-next {
+	pointer-events: auto;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
