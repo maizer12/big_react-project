@@ -167,23 +167,23 @@
                 </button>
                 <p class="earnings-column__text">Смена</p>
                 <div class="earnings-column__buttons">
-                  <button class="earnings-column__btn earnings-btn-active">6 ЧАСОВ</button>
-                  <button class="earnings-column__btn">12 ЧАСОВ</button>
+                  <button class="earnings-column__btn btn-six earnings-btn-active">6 ЧАСОВ</button>
+                  <button class="earnings-column__btn btn-twelve">12 ЧАСОВ</button>
                 </div>
                 <div class="earnings-column__rangers">
                   <div class="earnings-column__ranger">
                     <p class="earnings-column__text">Доход в нетто</p>
-                    <input type="text" class="js-range-slider" data-min="2" data-from="13" data-max="25"
+                    <input type="text" id='income' class="js-range-slider" data-min="2" data-from="75" data-max="250"
                       name="my_range" />
                   </div>
                   <div class="earnings-column__ranger">
                     <p class="earnings-column__text">Кол-во проезженных км за смену</p>
-                    <input type="text" class="js-range-slider" data-min="2" data-from="25" data-max="40"
+                    <input type="text" id='km' class="js-range-slider" data-min="2" data-from="10" data-max="350"
                       name="my_range" />
                   </div>
                   <div class="earnings-column__ranger">
                     <p class="earnings-column__text">Кол-во рабочих смен</p>
-                    <input type="text" class="js-range-slider" data-min="1" data-from="3" data-max="7"
+                    <input type="text" id='sum' class="js-range-slider" data-min="1" data-from="5" data-max="14"
                       name="my_range" />
                   </div>
                 </div>

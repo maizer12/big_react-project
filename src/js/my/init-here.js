@@ -3,10 +3,7 @@ $(document).ready(function () {
 	$('.select2').select2()
 })
 //
-$('.js-range-slider').ionRangeSlider({
-	type: 'single',
-	grid: false,
-})
+
 //SLICK
 $(document).ready(function () {
 	$('.car-park-slide').slick({
@@ -127,3 +124,81 @@ $(document).ready(function () {
 		type: 'iframe',
 	})
 })
+//calc
+const income = document.querySelector('#income')
+const km = document.querySelector('#km')
+const sum = document.querySelector('#sum')
+const result = document.querySelector('.earnings-column__sum')
+const btnAllCalc = document.querySelector('.earnings-column__buttons')
+if (sum && result && btnAllCalc && km) {
+	$(document).ready(function () {
+		// Ініціалізуємо слайдер
+		$('.js-range-slider').ionRangeSlider({
+			type: 'single',
+			grid: false,
+		})
+		$('.js-range-slider')
+			.on('change', function () {
+				inputChange()
+			})
+			.trigger('change')
+		$('.js-range-slider').on('change', function () {
+			inputChange()
+		})
+	})
+
+	let switchBtn = true
+
+	income.addEventListener('input', inputChange)
+	km.addEventListener('change', inputChange)
+	sum.addEventListener('input', inputChange)
+
+	function allCalc(netto, km, sum) {
+		const n = Number(netto)
+		const k = Number(km) * 0.1
+		const s = Number(sum)
+		if (switchBtn) {
+			return (n - 15 - k) * s
+		} else {
+			return (n - 25 - k) * s
+		}
+	}
+
+	function inputChange() {
+		const incomeValue = income.value
+		const kmValue = km.value
+		const sumValue = sum.value
+		const resultCalc = allCalc(incomeValue, kmValue, sumValue)
+		result.textContent = Math.round(resultCalc) + ' EUR'
+	}
+
+	function btnChange(elem) {
+		const btnAct = document.querySelector('.earnings-btn-active')
+		if (btnAct) {
+			btnAct.classList.remove('earnings-btn-active')
+		}
+		elem.classList.add('earnings-btn-active')
+	}
+
+	btnAllCalc.addEventListener('click', e => {
+		const elem = e.target
+		const one = elem.classList.contains('btn-six')
+		const two = elem.classList.contains('btn-twelve')
+		if (one) {
+			switchBtn = true
+			inputChange()
+		}
+		if (two) {
+			switchBtn = false
+			inputChange()
+		}
+		if (one || two) {
+			btnChange(elem)
+		}
+	})
+} else {
+	$('.js-range-slider').ionRangeSlider({
+		type: 'single',
+		grid: false,
+	})
+}

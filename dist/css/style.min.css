@@ -2993,3 +2993,28 @@ body.lock {
     left: -80%;
   }
 }
+.popup-open {
+  overflow: hidden;
+}
+
+@media (max-height: 850px) {
+  .earnings-column__inner {
+    margin: 0 10px;
+  }
+  .earnings-column__rangers {
+    row-gap: 30px;
+  }
+  .rangers-home-column .earnings-column__rangers {
+    row-gap: 40px;
+  }
+  .earnings-home .irs--flat {
+    height: 38px;
+  }
+  .earnings-home .earnings-column {
+    align-items: start;
+  }
+  .earnings-column-switch__line {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+}
