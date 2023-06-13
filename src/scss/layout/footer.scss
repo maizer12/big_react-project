@@ -78,6 +78,7 @@
 	}
 	&__item {
 		display: flex;
+		align-items: center;
 		column-gap: 16px;
 		margin-bottom: 28px;
 		&:last-child {
@@ -210,6 +211,7 @@
 @media (max-width: 520px) {
 	.footer__logo {
 		max-width: 145px;
+		margin-top: 10px;
 	}
 	.footer {
 		padding-top: 0;
@@ -231,5 +233,16 @@
 	}
 	.footer__footer {
 		font-size: 14px;
+	}
+}
+@media (max-width: 400px) {
+	.connect-to__inner {
+		align-items: center;
+	}
+	.connect-to__img {
+		height: 208px;
+		width: auto;
+		object-fit: cover;
+		object-position: right;
 	}
 }
