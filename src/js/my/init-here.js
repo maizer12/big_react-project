@@ -55,6 +55,13 @@ const body = document.querySelector('body')
 const btnPopup = document.querySelector('.start-mani')
 const innerPopup = document.querySelector('.earnings-column')
 const closePopup = document.querySelector('.earnings-column__close')
+const menu = document.querySelector('.menu')
+
+menu?.addEventListener('click', e => {
+	if (e.target.classList.contains('menu')) {
+		body.classList = ''
+	}
+})
 
 const clearBody = () => {
 	if (body) {
