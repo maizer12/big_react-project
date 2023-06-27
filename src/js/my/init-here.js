@@ -209,3 +209,50 @@ if (sum && result && btnAllCalc && km) {
 		grid: false,
 	})
 }
+//popup finish
+// function handleFile() {
+// 	var fileInput = document.getElementById('fileInput')
+// 	var previewImage = document.getElementById('previewImage')
+// 	console.log(fileInput)
+// 	var file = fileInput.files[0]
+// 	var reader = new FileReader()
+// 	reader.onload = function (e) {
+// 		var imageDataUrl = e.target.result
+// 		previewImage.src = imageDataUrl
+// 	}
+
+// 	reader.readAsDataURL(file)
+// }
+// const testBtn = document.querySelector('#test-btn')
+
+// testBtn.addEventListener('click', () => {
+// 	handleFile()
+// })
+// const fullDataColumns = document.querySelector('.basic-data__columns')
+
+// fullDataColumns?.addEventListener('click', e => {
+// 	const elem = e.target
+// 	if (elem.classList.contains('basic-data-column__input')) {
+// 		console.log(elem)
+// 	}
+// })
+const allInputs = document.querySelectorAll('.basic-data-column__input')
+
+allInputs.forEach(e => {
+	e.addEventListener('change', () => {
+		const previewImage = e.parentNode.querySelector(
+			'.basic-data-column__img-doc'
+		)
+		const file = e.files[0]
+		const reader = new FileReader()
+		console.log(previewImage)
+		reader.onload = function (event) {
+			const imageDataUrl = event.target.result
+			console.log(imageDataUrl)
+			previewImage.src = imageDataUrl
+			previewImage.style.display = 'block'
+		}
+
+		reader.readAsDataURL(file)
+	})
+})

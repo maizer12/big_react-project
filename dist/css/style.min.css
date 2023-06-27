@@ -16,12 +16,313 @@
 /* Шаблоны (заготовки)
 * @extend %имя шаблона;
 */
+.popup-forms {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-one {
+  background-color: #fff;
+  max-width: 861px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 60px 50px 45px;
+}
+.popup-one__title {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-bottom: 45px;
+  text-align: center;
+  color: #5b5b5b;
+}
+.popup-one__desc {
+  line-height: 1.37;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  color: #686868;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.popup-one__sub-title {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.416;
+  margin-bottom: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.popup-one__label {
+  border: 1px solid #cbcbcb;
+  display: flex;
+  height: 54px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+  padding-left: 76px;
+}
+.popup-one__code {
+  position: absolute;
+  pointer-events: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 15px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  color: #474747;
+  text-align: left;
+}
+.popup-one__code::after {
+  content: "";
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: -6px;
+  right: -11px;
+  transform: translateY(50%);
+  background-color: #cbcbcb;
+}
+.popup-one__input {
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 11px;
+  position: relative;
+  display: block;
+  color: #474747;
+}
+.popup-one__input::placeholder {
+  transition: 0.6s;
+  color: #dadada;
+}
+.popup-one__input:focus::placeholder {
+  opacity: 0;
+}
+.popup-one__agreement {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 76px;
+}
+.popup-one__agreement a {
+  font-weight: 600;
+  color: #72b52a;
+}
+.popup-one__btn {
+  max-width: 271px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.7200000286px;
+  text-align: center;
+  background-color: #ff8058;
+  padding: 6px 52px;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.4s;
+  margin: 0 auto;
+  display: block;
+}
+.popup-one__btn:hover {
+  background-color: #e24414;
+}
+
+.popup-one__label_pl {
+  padding-left: 0;
+}
+
+.popup-two-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.popup-two-buttons__btn {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  height: 70px;
+  max-width: 271px;
+  width: 100%;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #ff8058;
+  transition: 0.6s;
+}
+.popup-two-buttons__btn:hover {
+  background-color: #eb6036;
+}
+.popup-two-buttons__return {
+  color: #eb6036;
+  background-color: #fff;
+  border: 2px solid #ff8058;
+}
+.popup-two-buttons__return:hover {
+  color: #fff;
+}
+
+.basic-data {
+  background-color: #fff;
+  border-radius: 30px;
+  max-width: 861px;
+  width: 100%;
+}
+.basic-data__header {
+  padding: 15px 50px;
+  display: flex;
+  column-gap: 26px;
+  position: relative;
+  border-bottom: 5px solid rgba(181, 81, 42, 0.1490196078);
+  margin-bottom: 42px;
+}
+.basic-data__header::after {
+  content: "";
+  height: 5px;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  left: 0;
+  background: #72b52a;
+}
+.basic-data__content {
+  padding: 0 50px;
+  padding-bottom: 42px;
+}
+.basic-data__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.basic-data__sub-title {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #dadada;
+  letter-spacing: -0.7200000286px;
+  text-align: left;
+}
+.basic-data__title {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5b5b5b;
+  letter-spacing: -0.7200000286px;
+  text-align: left;
+}
+.basic-data__name {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.416;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #686868;
+  margin-bottom: 42px;
+}
+.basic-data__columns {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 36px;
+  flex-wrap: wrap;
+}
+
+.basic-data-column {
+  max-width: 331px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.basic-data-column__desc {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2.22;
+  color: #000000;
+  text-align: left;
+  text-align: center;
+}
+.basic-data-column__img {
+  width: 100%;
+  border: 2px solid rgba(255, 127, 87, 0.6980392157);
+  height: 176px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.basic-data-column__img-doc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.basic-data-column__input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.basic-data-column__contains {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.basic-data-column__name {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(255, 127, 87, 0.6980392157);
+  letter-spacing: -0.7200000286px;
+  text-align: left;
+}
+.basic-data-column__icon {
+  width: 66px;
+}
+
 * {
   padding: 0;
   margin: 0;
   border: 0;
   box-sizing: border-box;
   color: #000000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 *:before,
