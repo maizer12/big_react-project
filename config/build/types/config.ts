@@ -12,5 +12,10 @@ export interface BuildOptions {
 	bail?: boolean;
 	isDev: boolean;
 	isBuild?: boolean;
-	port?: number;
+	port: number;
+}
+
+export interface BuildEnv {
+	mode: BuildMode;
+	port: number;
 }
