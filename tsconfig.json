@@ -9,8 +9,10 @@
 		"baseUrl": "./",
 		"jsx": "react-jsx",
 		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true
 	},
+	"include": ["src/**/*", "declarations.d.ts"],
 	"ts-node": {
 		"compilerOptions": {
 			"module": "commonjs"

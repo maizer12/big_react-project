@@ -6,13 +6,17 @@ interface Props {
 }
 
 export const Counter: React.FC<Props> = ({ className }) => {
-	const [count, setCount] = React.useState(0);
+	const [value, setValue] = React.useState(0);
 
 	return (
 		<div className={className}>
-			<h1 className={styles.title}>{count}</h1>
-			<button onClick={() => setCount(count + 1)}>+</button>
-			<button onClick={() => setCount(count - 1)}>-</button>
+			<h1 className={styles.title}>{value}</h1>
+			<button className={styles.button} onClick={() => setValue(prev => prev + 1)}>
+				+
+			</button>
+			<button className={styles.button} onClick={() => setValue(prev => prev - 1)}>
+				-
+			</button>
 		</div>
 	);
 };
