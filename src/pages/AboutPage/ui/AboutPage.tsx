@@ -1,11 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-interface Props {
-	className?: string;
-}
+const AboutPage = () => {
+    const { t } = useTranslation('about');
 
-const AboutPage: React.FC<Props> = ({ className }) => {
-	return <div className={className}>AboutPage</div>;
+    return (
+        <div>
+            {t('О сайте')}
+        </div>
+    );
 };
 
 export default AboutPage;
